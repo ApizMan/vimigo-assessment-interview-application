@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 // --------String---------
-const baseURL = "http://10.0.2.2:8000/api";
+const baseURL = "https://vimigoapi.000webhostapp.com/api";
 const attendantRecordURL = '/attendant-record';
 
 //colors used in this app

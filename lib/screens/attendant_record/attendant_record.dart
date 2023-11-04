@@ -20,7 +20,6 @@ class _AttendantRecordState extends State<AttendantRecord> {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     await prefs.setBool("descendingOrder", isDescending);
     await prefs.setBool("changeFormat", isChangeFormat);
-    print(await prefs.setBool("descendingOrder", isDescending));
   }
 
   @override

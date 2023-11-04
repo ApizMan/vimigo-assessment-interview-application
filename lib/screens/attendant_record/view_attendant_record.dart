@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form_bloc/flutter_form_bloc.dart';
+import 'package:share_plus/share_plus.dart';
 import 'package:vimigo_technical_interview/public_components/loading_dialog.dart';
 import 'package:vimigo_technical_interview/resources/attendant_resources.dart';
 
@@ -110,6 +111,23 @@ class _ViewAttendantRecordState extends State<ViewAttendantRecord> {
                         ),
                       ),
                     ],
+                  ),
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.only(bottom: 30.0),
+                      child: Align(
+                        alignment: Alignment.bottomCenter,
+                        child: ElevatedButton.icon(
+                          onPressed: () async {
+                            final name = snapshot.data['data']['user'];
+                            final phoneNum = snapshot.data['data']['phone'];
+                            await Share.share("Name: $name\nPhone Number: $phoneNum\nCheck-In: $outputDate");
+                          },
+                          icon: const Icon(Icons.share),
+                          label: const Text("Share"),
+                        ),
+                      ),
+                    ),
                   ),
                 ],
               ),

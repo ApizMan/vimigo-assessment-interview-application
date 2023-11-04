@@ -29,18 +29,4 @@ class AttendantResources {
     );
     return json.decode(response.body);
   }
-
-  Future deleteAttendant(String attendantURL) async {
-    var response = await http.delete(
-      Uri.parse("$baseURL$attendantRecordURL/$attendantURL"),
-    );
-
-    return json.decode(response.body);
-  }
-
-  Future updateAttendant({required String url, required Object body}) async {
-    var response = await http.put(Uri.parse(url), body: body);
-
-    return json.decode(response.body);
-  }
 }

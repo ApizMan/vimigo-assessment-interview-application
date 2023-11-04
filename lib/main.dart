@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:vimigo_technical_interview/screens/attendant_record/attendant_record.dart';
 import 'package:vimigo_technical_interview/screens/on_boarding/screen_one.dart';
@@ -45,7 +44,7 @@ class _MyAppState extends State<MyApp> {
         useMaterial3: true,
       ),
       home:
-          skip == true || next == true ? const AttendantRecord() : ScreenOne(),
+          skip == true || next == true ? const AttendantRecord() : const ScreenOne(),
     );
   }
 }
